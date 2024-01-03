@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="wep_pages_test.ProductTest">
+      <class name="wep_pages_test.CartTest">
         <methods>
-          <include name="addProductToCart"/>
+          <include name="verifyCart"/>
           <include name="tearDown"/>
+          <include name="cartSetUp"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- wep_pages_test.ProductTest -->
+      </class> <!-- wep_pages_test.CartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

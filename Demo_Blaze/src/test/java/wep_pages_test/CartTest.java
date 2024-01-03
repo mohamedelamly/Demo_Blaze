@@ -18,6 +18,8 @@ public class CartTest extends BaseTest {
   public void cartSetUp() {
 	  ProductPage product = homePage.clickOnProduct("Samsung galaxy s6");
 	  product.clickOnAddToCart();
+	  product.getProductName();
 	  cart = homePage.clickOnCart();
+	  
   }
 }

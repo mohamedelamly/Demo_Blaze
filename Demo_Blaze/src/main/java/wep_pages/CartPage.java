@@ -17,6 +17,8 @@ public class CartPage {
 	private By productName = By.cssSelector("#tbodyid > tr > td:nth-child(2)");
 	private By productPrice = By.cssSelector("#tbodyid > tr > td:nth-child(3)");
 	
+	public String itemName;
+	
 	public CartPage(WebDriver driver) {
 		this.driver = driver;
 		wait = new WebDriverWait(driver, Duration.ofSeconds(2));
@@ -30,7 +32,8 @@ public class CartPage {
 	
 	public String getProductPrice() {
         wait.until(ExpectedConditions.presenceOfElementLocated(productPrice));
-		return driver.findElement(productPrice).getText();
+		itemName = driver.findElement(productPrice).getText();
+		return itemName;
 	}
 	
 	public void clickOnPlaceOrderButton() {
