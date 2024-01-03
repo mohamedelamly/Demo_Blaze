@@ -1,5 +1,6 @@
 package wep_pages_test;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -12,7 +13,8 @@ public class ProductTest extends BaseTest {
 	
   @Test(dataProvider = "getProductData")
   public void addProductToCart(String productName) {
-	  product=homePage.clickOnProduct("");
+	  product=homePage.clickOnProduct(productName);
+	  Assert.assertEquals(product.getProductName(), productName);
 	  driver.navigate().to(homePageUrl);
   }
   

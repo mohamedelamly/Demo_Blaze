@@ -5,7 +5,7 @@
     <classes>
       <class name="wep_pages_test.ProductTest">
         <methods>
-          <include name="addProductToCart" invocation-numbers="0"/>
+          <include name="addProductToCart"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>

@@ -16,7 +16,7 @@ public class HomePage {
 	
 	By signUpLink = By.id("signin2");
 	By loginLink = By.id("login2");	
-	By cartLink = By.id("cartur");
+	By cartLink = By.cssSelector("#navbarExample > ul > li:nth-child(4)");
 	By productName;
 	
 	public HomePage(WebDriver driver) {
